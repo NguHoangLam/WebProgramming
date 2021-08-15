@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration form</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<form name="MyForm" method="get" action="problem 4.html">
+		<table border="1px">
+			<colgroup>
+				<col width="50px">
+				<col width="100px">
+			</colgroup>
+			<tfoot>
+				<tr style="background-color: rgb(209,237,225);">
+					<td colspan="2">
+						<button type="Submit">Submit</button>
+						<button type="Reset">Clear This Form</button>
+					</td>
+				</tr>
+			</tfoot>
+			<tbody>
+				<tr>
+					<th>
+						<label for="last_name">
+							<b>Last Name</b>
+						</label>
+					</th>
+					<td>
+						<input type="text" id="last_name" name="last name" required="true" value="Nakov" autofocus="">
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<label for="first_name">
+							<b>First Name</b>
+						</label>
+					</th>
+					<td>
+						<input type="text" id="first_name" name="first name" required="true" value="Svetlin">
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<label for="address">
+							<b>Address</b>
+						</label>
+					</th>
+					<td>
+						<textarea name="Area" style="margin: 0px; height: 109px; width: 187px;" id="address" required="true" >
+							17 Hristo Botev Str 
+							floor 3, apt 12
+						</textarea>
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<label for="city">
+							<b>City</b>
+						</label>
+					</th>
+					<td>
+						<table>
+							<tr>
+								<td>
+									<input type="text" id="city" name="city" required="true" value="Kaspichan">
+								</td>
+								<th>
+									<label for="state">
+										<b>State</b>
+									</label>
+								</th>
+								<td>
+									<input type="text" id="state" name="state" required="true">
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<label for="zip_code">
+							<b>Zip/Postal Code</b>
+						</label>
+					</th>
+					<td>
+						<input type="number" id="zip_code" name="zip_code" required="true" value="9325" min="0" max="999999">
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<label for="country">
+							<b>Contry</b>
+						</label>
+					</th>
+					<td>
+						<select name="country" id="country">
+							<option value="Bulgaria" selected="selected">Bulgaria</option>
+							<option value="Japan">Nihon</option>
+							<option value="Vietnam">Betonamu</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<label for="phone">
+							<b>Phone(country code,area code,number)</b>
+						</label>
+					</th>
+					<td>
+						(+<input type="number" id="phone" name="phone" required="true" value="359">)
+						<input type="number" name="phone" required="true" value="88">
+						-
+						<input type="number" name="phone" required="true" value="8334343">
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<label for="email">
+							<b>E-mail</b>
+						</label>
+					</th>
+					<td>
+						<input type="email" id="email" name="email"  required="true" value="nakov@Kaspichan.org">
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<label for="month">
+							<b>Birth date</b>
+						</label>
+					</th>
+					<td>
+						<label for="month">Month</label>
+						<input type="number" id="month" name="month" required="true" value="06" min="1" max="12">
+						<label for="day">Day</label>
+						<input type="number" id="day" name="day" required="true" value="14" min="1" max="31">
+						<label for="year">Year(4 digit)</label>
+						<input type="number" id="year" name="year" required="true" value="1980" min="1800" max="2999">
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<label for="gender">
+							<b>Gender</b>
+						</label>
+					</th>
+					<td>
+						<select name="gender" id="gender">
+							<option value="Value 1" selected="selected">Male</option>
+							<option value="Value 1" >Female</option>
+							<option value="Value 1" >Both</option>
+							<option value="Value 1" >None</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<label for="spring">
+							<b>Starting date</b>
+						</label>
+					</th>
+					<td>
+						<input type="radio" id="spring" name="date" value="Spring 2006">
+						 <label for="spring">Spring 2006</label>
+						<input type="radio" id="summer" name="date" value="Summer 2006">
+						<label for="summer">Summer 2006</label>
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<label for="comment">
+							<b>Comments/Questions</b>
+						</label>
+					</th>
+					<td>
+						<textarea name="Area" style="margin: 0px; height: 109px; width: 187px;" id="comment" required="true" >
+							Please send me nor information
+							about the lodging.
+						</textarea>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+</body>
+</html>

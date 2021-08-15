@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flower</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- facebook -->
+	<div id="fb-root"></div>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v11.0" nonce="YByDZqOf"></script>
+</head>
+<body >
+	<header>
+		<!-- block-1 -->
+		<div class="section_1" style="background-color: rgb(44,62,80);color: white">
+			<div>
+				<p><i class="fa fa-phone"></i>
+				Hotline: <b>0968 159 239 - 08.38 409 092</b></p>
+			</div>
+			<div>
+				<p><i class="fa fa-map-marker" aria-hidden="true"></i>
+				Địa chỉ:<b>01 Nguyễn Cửu Vân,Bình Thạnh,TP.HCM</b></p>
+			</div>
+			<div>
+				<p>
+				<a href="signIn.html" style="text-decoration: none;color: white"><b>Đăng nhập</b></a>
+				hoặc
+			 	<a href="create.html" style="text-decoration: none;color: white"><b>Tạo tài khoản mới</b></a>
+			 	</p>
+			</div>
+		</div>
+		<!-- block-2 -->
+		<div class="sectio_2">
+			<div>
+				<a href="problem5.html"><img src="./images/logo.PNG" alt="logo" loading=lazy></a>
+			</div>
+			<div>
+				<form  method="get" action="problem5.html">
+					<input type="text" placeholder="Tìm kiếm..." name="search">
+					<button type="submit">
+						<i class="fa fa-search"></i>
+					</button>
+				</form>
+			</div>
+			<div>
+				<p> <i class="fa fa-shopping-cart" style="color: red"></i>
+				 3 sản phẩm</p>
+				 <p style="color: red"><b>1,289,000 đ</b></p>
+			</div>
+		</div>
+	</header>
+	<nav>
+		<!-- block 3 -->
+		<div class="section_3">
+			<ul type="none"  >
+				<li><a href="problem5.html"><b>TRANG CHỦ</b></a></li>
+				<li><a href="problem5.html"><b>HOA SINH NHẬT</b></a></li>
+				<li><a href="problem5.html"><b>HOA TÌNH YÊU</b></a></li>
+				<li><a href="problem5.html"><b>HOA CHÚC MỪNG</b></a></li>
+				<li><a href="problem5.html"><b>HOA VĂN PHÒNG</b></a></li>
+				<li><a href="problem5.html"><b>CHỦ ĐỀ</b></a></li>
+				<li><a href="problem5.html"><b>THIẾT KẾ</b></a></li>
+				<li><a href="problem5.html"><b>THỂ LOẠI</b></a></li>
+				<li><a href="problem5.html"><b>QUÀ TẶNG</b></a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<section>
+		<div style="background-color: rgb(248,248,248);">
+				<p>
+					<b>TRANG CHỦ ></b>
+					<span style="color: gray">TÀI KHOẢN CỦA BẠN</span>
+				</p>
+		</div>
+		<div>
+			<div>
+				<p>
+					<b>TÀI KHOẢN CỦA BẠN</b>
+				</p>
+			</div>
+			<div>
+				<form name="myForm" method="get" action="problem 7.html">
+					<table>
+						<tr>
+							<td colspan="2">
+								<button type="button" style="background-color: rgb(102,45,145);" class="btn btn-primary">
+									<b>QUẢN LÝ TÀI KHOẢN</b>
+								</button>
+								<button type="button" style="color: rgb(102,45,145);" class="btn btn-outline-primary">
+									<b>QUẢN LÝ ĐƠN HÀNG</b>
+								</button>
+								<button type="button" style="color: rgb(102,45,145);" class="btn btn-outline-primary">
+									<b>THAY ĐỔI MẬT KHẨU</b>
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<p>Bạn có thể cập nhập lai thông tin của mình tại các trường dưới đây</p>
+								<p>Lưu ý: Những trường có dấu"
+									<span style="color: red">*</span>
+								"là bắt buộc</p>
+							</td>
+						</tr>
+						<tr>
+							<th>
+								<label for="name">
+									Họ và tên
+									<span style="color: red">*</span>
+								</label>
+							</th>
+							<th>
+								<label for="birth">
+									Ngày sinh
+								</label>
+							</th>
+						</tr>
+						<tr>
+							<td>
+								<input type="text" id="name" class="form-control"  name="name" required="true" value="Nguyễn băn A">
+							</td>
+							<td>
+								<input type="text" class="form-control" id="birth" name="birth" placeholder="01/01/1990" value="">
+							</td>
+						</tr>
+						<tr>
+							<th>
+								<label for="city">
+									Tỉnh - Thành phố
+									<span style="color: red">*</span>
+								</label>
+							</th>
+							<th>
+								<label for="company">
+									Công ty
+								</label>
+							</th>
+						</tr>
+						<tr>
+							<td>
+								<input type="text" id="city" class="form-control"  name="city" required="true" value="TP.Hồ Chí Minh">
+							</td>
+							<td>
+								<input type="text" class="form-control" id="company" name="company" placeholder="Công ty của bạn" value="">
+							</td>
+						</tr>
+						<tr>
+							<th>
+								<label for="district">
+									Quận - Huyện
+									<span style="color: red">*</span>
+								</label>
+							</th>
+							<th>
+								<label for="position">
+									Chức vụ
+								</label>
+							</th>
+						</tr>
+						<tr>
+							<td>
+								<input type="text" id="district" class="form-control"  name="district" required="true" value="Quận 5">
+							</td>
+							<td>
+								<input type="text" class="form-control" id="position" name="position" placeholder="Chức vụ tại công ty" value="">
+							</td>
+						</tr>
+						<tr>
+							<th>
+								<label for="address">
+									Địa chỉ
+									<span style="color: red">*</span>
+								</label>
+							</th>
+							<th>
+								<label for="flower">
+									Bạn thích loại hoa
+								</label>
+							</th>
+						</tr>
+						<tr>
+							<td>
+								<input type="text" id="address" class="form-control"  name="address" required="true" value="271/2 An Dương Vương,Phường 3,Quãn 5,TP">
+							</td>
+							<td>
+								<input type="text" class="form-control" id="flower" name="flower" placeholder="Hoa hồng,Hoa lan..." value="">
+							</td>
+						</tr>
+						<tr>
+							<th>
+								<label for="phone">
+									Số điện thoại
+									<span style="color: red">*</span>
+								</label>
+							</th>
+							<th>
+								<label for="color">
+									Bạn thích Màu hoa
+								</label>
+							</th>
+						</tr>
+						<tr>
+							<td>
+								<input type="tel" id="phone" class="form-control"  name="phone" required="true" value="0973 371 346">
+							</td>
+							<td>
+								<input type="text" class="form-control" id="flower" name="flower" placeholder="Màu đỏ,Màu tím" value="">
+							</td>
+						</tr>
+						<tr>
+							<th>
+								<label for="email">
+									Email
+									<span style="color: red">*</span>
+								</label>
+							</th>
+							<th>
+								<label for="flower_arrangement">
+									Phong cách cắm hoa
+								</label>
+							</th>
+						</tr>
+						<tr>
+							<td>
+								<input type="email" id="email" class="form-control"  name="email" required="true" value="nguyenvana@gmail.com">
+							</td>
+							<td>
+								<input type="text" class="form-control" id="flower_arrangement" name="flower_arrangement" placeholder="Cổ điển,Hiện đại,Đơn giản,Dễ thương..." value="">
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<button type="submit" style="color: rgb(102,45,145);" class="btn btn-outline-primary">
+									<b>CẬP NHẬT THÔNG TIN</b>
+								</button>
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+	</section>
+	
+	<footer>
+		<!-- block 11 -->
+		<div class="section_11">
+			<div>
+				<img src="./images/ship.PNG" alt="flower" loading="lazy">
+				<h1>GIAO HÀNG MIỄN PHÍ</h1>
+				<p>Chúng tôi giao hàng miễn phí trong nội thành</p>
+			</div>
+			<div>
+				<img src="./images/consult.PNG" alt="flower" loading="lazy">
+				<h1>TƯ VẤN TẬN TÂM</h1>
+				<p>Mang đến cho Quý Khách những sản phẩm tốt nhất</p>
+			</div>
+			<div>
+				<img src="./images/price.PNG" alt="flower" loading="lazy">
+				<h1>GIÁ THÀNH TỐT NHẤT</h1>
+				<p>Cam kết giá thành & dịch vụ sau bán hàng tốt nhất</p>
+			</div>
+		</div>
+		<!-- block 12 -->
+		<div class="section_12">
+			<div>
+				<h1>HỆ THỐNG</h1>
+			</div>
+			<hr align="left">
+			<div>
+				<ul style="list-style-type: none">
+					<li>
+						<a href="problem5.html" style="text-decoration: none" >
+							Hoa sinh nhật
+						</a>
+					</li>
+					<li>
+						<a href="problem5.html" style="text-decoration: none" >
+							Hoa cưới
+						</a>
+					</li>
+					<li>
+						<a href="problem5.html" style="text-decoration: none" >
+							Hoa chúc mừng
+						</a>
+					</li>
+					<li>
+						<a href="problem5.html" style="text-decoration: none" >
+							Chủ đề
+						</a>
+					</li>
+					<li>
+						<a href="problem5.html" style="text-decoration: none" >
+							Thiết kế
+						</a>
+					</li>
+					<li>
+						<a href="problem5.html" style="text-decoration: none" >
+							Hoa theo thể loại
+						</a>
+					</li>
+					<li>
+						<a href="problem5.html" style="text-decoration: none" >
+							Quà tặng
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- block 13 -->
+		<div class="section_12">
+			<div>
+				<h1>CÔNG TY</h1>
+			</div>
+			<hr align="left">
+			<div>
+				<ul style="list-style-type: none">
+					<li>
+						<a href="problem5.html" style="text-decoration: none" >
+							Giới thiệu
+						</a>
+					</li>
+					<li>
+						<a href="problem5.html" style="text-decoration: none" >
+							Tin tức 
+						</a>
+					</li>
+					<li>
+						<a href="problem5.html" style="text-decoration: none" >
+							Tuyển dụng
+						</a>
+					</li>
+					<li>
+						<a href="problem5.html" style="text-decoration: none" >
+							Chính sách thành viên
+						</a>
+					</li>
+					<li>
+						<a href="problem5.html" style="text-decoration: none" >
+							Chương trình khuyến mãi
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- block 14 -->
+		<div class="section_12">
+			<div>
+				<h1>THÔNG TIN</h1>
+			</div>
+			<hr align="left">
+			<div>
+				<ul style="list-style-type: none">
+					<li>
+						<a href="problem5.html" style="text-decoration: none" >
+							Hướng dẫn đặt hàng
+						</a>
+					</li>
+					<li>
+						<a href="problem5.html" style="text-decoration: none" >
+							Phương thức thành toán
+						</a>
+					</li>
+					<li>
+						<a href="problem5.html" style="text-decoration: none" >
+							Điều khoản mua hàng
+						</a>
+					</li>
+					<li>
+						<a href="problem5.html" style="text-decoration: none" >
+							Phí vận chuyển
+						</a>
+					</li>
+					<li>
+						<a href="problem5.html" style="text-decoration: none" >
+							Ý nghĩa loài hoa
+						</a>
+					</li>
+					<li>
+						<a href="problem5.html" style="text-decoration: none" >
+							Chăm sóc và bảo quản hoa
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- block 15 -->
+		<div class="section_15">
+			<div>
+				<h1>VIOLET ON WEDNESDAY</h1>
+			</div>
+			<hr align="left">
+			<div>2wq
+				<div>
+					<p><b>Địa chỉ</b></p>
+				</div>
+				<div>
+					<p>01 Nguyễn Cửu vân Bình Thạnh,TP.HCM</p>
+				</div>
+			</div>
+			<div>
+				<div>
+					<p><b>Điện thoại</b></p>
+				</div>
+				<div>
+					<p>08 38 40 90 92</p>
+				</div>
+			</div>
+			<div>
+				<div>
+					<p><b>Hotline</b></p>
+				</div>
+				<div>
+					<p>0968 159 239</p>
+				</div>
+			</div>
+			<div>
+				<div>
+					<p><b>Mọi ý kiến xon vui lòng gửi về</b></p>
+				</div>
+				<div>
+					<a href="problem5.html" style="text-decoration: none" >
+						support@violetonwednesday.com
+					</a>
+				</div>
+				<div>
+					<a href="problem5.html" style="text-decoration: none" >
+						<i class="fa fa-facebook-square"></i>
+					</a>
+					<a href="problem5.html" style="text-decoration: none" >
+						<i class="fa fa-youtube-square"></i>
+					</a>
+					<a href="problem5.html" style="text-decoration: none" >
+						<i class="fa fa-twitter-square"></i>
+					</a>
+					<a href="problem5.html" style="text-decoration: none" >
+						<i class="fa fa-google-plus-square"></i>
+					</a>
+					<a href="problem5.html" style="text-decoration: none" >
+						<i class="fa fa-pinterest-square"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- block 16 -->
+		<div class="section_16">
+			<div>
+				<p>&copy; 2015 Violet on Wednesday Store.ALL Rights Reserved. Sponsored by Letsop Solutions</p>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
