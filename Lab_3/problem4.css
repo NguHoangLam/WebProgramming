@@ -1,0 +1,29 @@
+.container{
+	background-color: rgb(89, 89, 89);
+}
+header h1{
+	font-size: 28px;
+	color: rgb(185,185,174);
+}
+main {
+	color: rgb(185,185,174);
+}
+.dot{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: green;
+}
+.white_text {
+	color: white;
+}
+.yello_text {
+	color: rgb(213,227,160);
+}
+.orange_text {
+	color: rgb(207,103,52);
+}
+.red_text {
+	color: red;
+}

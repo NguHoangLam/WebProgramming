@@ -1,0 +1,64 @@
+.prob-7a{
+	width: 600px;
+	padding: 10px;
+	border: 1px solid #ddd;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 0 0 5px 5px #666;
+}
+.prob-7b{
+	margin-top: 60px;
+	width: 500px;
+	padding: 10px;
+	border: 1px solid #ddd;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 0 0 5px 5px #666;
+}
+.title {
+	position: relative;
+	padding-left: 20px;
+	font-weight: bold;
+}
+.title::before{
+	content: "";
+	position: absolute;
+	width: 10px;
+	left: 5px;
+	top: 2px;
+	bottom: 2px;
+	transform: skew(-20deg);
+	-webkit-transform: skew(-20deg);
+	-khtml-webkit-transform: skew(-20deg);
+	background-color: #dd3333;
+}
+main div h1{
+	font-size: 20px;
+	font-weight: bold;
+}
+main div ul {
+	border-top: 1px dashed black;
+	padding-top: 20px;
+}
+#time{
+	color: rgb(192,192,202);
+}
+#sport{
+	color: rgb(134,129,125);
+}
+main div ul li a{
+	color: black;
+}
+img {
+	width: 50px;
+	height: auto;
+	border-radius: 50%;
+}
+#user{
+	font-size: 12px;
+	font-weight: bold;
+}
+#timeAndView {
+	font-size: 12px;
+	color: #ccc;
+}
