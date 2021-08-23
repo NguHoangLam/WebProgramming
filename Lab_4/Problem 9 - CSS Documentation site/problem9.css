@@ -1,0 +1,149 @@
+/*Flexbox*/
+.flex-container{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 2px;
+	background-color: #F1F1F1;
+	border: 1px solid #000;
+	box-sizing: border-box;
+}
+.flex-item{
+	padding: 15px;
+	box-sizing: border-box;
+}
+.item-1{
+	width: 20%;
+}
+.item-2{
+	width: 60%;
+}
+.item-3{
+	width: 20%;
+	padding: 1px
+}	
+
+/*item-1*/
+.item-1 a {
+	text-decoration: none;
+	list-style-type: none;
+	color: #000;
+	font-size: 30px;
+}
+.item-1 ul{
+	padding-left: 0;
+}
+.item-1 ul li:first-child a{
+	color: #961918;
+	font-weight: bold;
+}
+/*item-2*/
+.item-2{
+	background-color: #fff;
+	border:1px solid #000;
+}
+.item-2 a{
+	color: #961918;
+}
+button{
+	background-color: #fff;
+}
+button:hover{
+	cursor: pointer;
+}
+.button{
+	padding-bottom: 5px;
+	border-bottom: 1px solid black;
+}
+#previous::before{
+	font-family: "Font awesome 5 Free";
+	content: "\f0d9";
+	margin-right: 20px;
+	font-weight: 900;
+}
+#previous {
+	padding-right: 20px;
+	min-width: 100px;
+}
+#next::after{
+	font-family: "Font awesome 5 Free";
+	content: "\f0da";
+	margin-left: 20px;
+	font-weight: 900;
+}
+#next {
+	padding-left: 20px;
+	min-width: 100px;
+}
+.small-flex-container{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.item-4{
+	width: 100%
+}
+.item-4 {
+	padding: 0px;
+}
+.item-4 h2 {
+	margin-top: 5px;
+	margin-bottom: 0px;
+}
+.item-5{
+	width: 24.9%
+}
+.item-5 img {
+	width: 100%;
+	height: auto;
+}
+.item-6 {
+	width: 64.9%
+}
+.item-6 p{
+	font-weight: bold;
+}
+.title h2{
+	background-color: #808080;
+	color: #fff;
+	padding-left: 10px;
+}
+/*item 3*/
+.block{
+	text-align: center;
+	border:1px solid #000;
+	background-color: #fff;
+	margin: 1px;
+	margin-left: 2px;
+	
+}
+.block a {
+	margin-left: 5px;
+	margin-right: 5px;
+	color: #961918;
+}
+.block h2 {
+	margin: 0px;
+	margin-bottom: 10px;
+}
+.number1 #input{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.number1 button{
+	border-radius: 4px;
+}
+.number2 button{
+	margin-top: 5px;
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	background-color: #C1E7FA;
+	color: rgb(36,131,255);
+}
+@media (max-width: 768px) { 
+	.item-1,.item-2,.item-3{
+		width: 100%;
+	}
+	
+}

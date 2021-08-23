@@ -1,0 +1,72 @@
+nav {
+	background-color: rgb(41,74,112);
+	border-bottom:5px solid orange;
+}
+.nav {
+	width: 100%;
+	list-style-type: none;
+}
+.nav ul {
+	padding: 0;
+	margin: 0;
+}
+.nav > li{
+	float: left;
+	display: inline-block;
+	align-self: center;
+	
+}
+.nav a {
+	display: inline-block;
+	color: white;
+	padding: 10px;
+	border-left:1px solid white;
+	border-right:1px solid white;
+	padding-left: 20px;
+	padding-right: 20px;
+	
+}
+.nav > li:hover > a,.nav > .active{
+	background-color: orange;
+	text-decoration: none;
+
+}
+/*font awesome*/
+
+#dropdown::after {
+	font-family: "Font awesome 5 Free";
+	content: "\f078";
+	font-weight: 900;
+	margin-left: 10px;
+}
+/*sub menu*/
+.nav > li {
+    position: relative;
+}
+.sub-nav {
+	background-color: red;
+    position: absolute;
+    top: 44px;
+	width: 200px;
+	display: none;
+}
+.nav > li:hover >.sub-nav{
+	display: block;
+	background-color: rgb(41,74,112);
+
+}
+.sub-nav li{
+	display: block;
+	clear: both;
+	border-bottom: 1px solid white;
+	margin-bottom: 1px;
+}
+.sub-nav li a{
+	display: block;
+}
+.sub-nav > li:hover > a {
+	background-color: orange;
+	text-decoration: none;
+	color: white;
+    display: block;
+}
