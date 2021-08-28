@@ -1,0 +1,133 @@
+/*section*/
+main > .container > .row > .col-12 > .title:first-child{
+	margin-top: 20px;
+}
+main .container .col-12 h1{
+	box-sizing: border-box;
+	padding: 10px;
+	border-left: 4px solid #662D91;
+	font-size: 20px;
+	background-color: #F8F8F9;
+	border-top: 1px dashed black;
+	border-bottom: 1px dashed black;
+	
+}
+main .container .col-12 .row{
+	margin-left: 0;
+}
+main .container .col-12 .row > .col-6{
+	margin-bottom: 20px;
+	padding: 0px;
+}
+main .container .col-12 .col-6 .col-12{
+	padding-left: 0;
+
+}
+main .container .col-12 .col-6 a{
+	color: black;
+	text-decoration: none;
+}
+main .container .col-12 .col-6 #img-holder{
+	position: relative;
+
+}
+main .container .col-12 .col-6 #img-holder img{
+	width: 100%;
+	height: auto;
+}
+main .container .col-12 .col-6 #img-holder .overlay-discont{
+	position: absolute;
+	top:0;
+	right: 0;
+	background-color: red;
+	color: white;
+	padding: 9px 3px;
+}
+main .container .col-12 .col-6 #info-flower{
+	box-sizing: border-box;
+	padding: 5px;
+	background-color: #F8F8F9;
+}
+main .container .col-12 .col-6 #info-flower p:first-child{
+	font-size: 15px;
+	font-weight: bold;
+}
+main .container .col-12 .col-6 #id-flower{
+	color: #662D91;
+	font-weight: bold;
+}
+main .container .col-12 .col-6 #discount{
+	margin-bottom: 0px;
+	text-decoration-line: line-through;
+	font-size: 13px;
+	color: #ccc;
+}
+main .container .col-12 .col-6 #info-flower p:last-child{
+	font-weight: bold;
+	color: red;
+}
+/*end section*/
+/*aside*/
+
+aside .media,article .media{
+	margin-top: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px dashed black;
+	position: relative;
+	background-clip: content-box;
+	background-color: #F8F8F9;
+}
+.media img{
+	width: 30%
+}
+aside .media .info-aside{
+	height: 100%;
+}
+aside .media .info-aside h5{
+	color: black;
+}
+
+aside .media .info-aside p{
+	font-weight: bold;
+	color: red;
+	bottom: 0;
+}
+aside .media .info-aside p:last-child{
+	position: absolute;
+	bottom: 10px;
+}
+aside .media .info-aside #discount{
+	margin-bottom: 0px;
+	position: absolute;
+	bottom: 45px;
+	text-decoration-line: line-through;
+	font-size: 13px;
+	color: #ccc;
+}
+aside .media .overlay-discont{
+	position: absolute;
+	bottom: 25px;
+	right: 5px;
+	background-color: red;
+	color: white;
+	padding: 9px 3px;
+}
+
+/*article*/
+article div:first-child{
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+article .media i{
+	font-weight: 500;
+}
+article a{
+	color: black;
+}
+article .media{
+	background-color: white;
+}
+article .media h5{
+	font-size: 15px;
+	font-weight:bold;
+}

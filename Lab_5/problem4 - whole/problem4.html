@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="images/index.gif">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<!-- font awesome -->
+	<link href="fontawesome/css/all.min.css" type="text/css" rel="stylesheet">
+	<!-- my css -->
+	<link rel="stylesheet" type="text/css" href="problem4.css">
+
+	<title>Flower Shop</title>
+</head>
+<body>
+	<header>
+		<div class="section-1">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-md-3">
+						<i class="fa fa-phone"></i>
+						Hotline: <b>0968 159 239 - 08.38 409 092</b>
+					</div>
+					<div class="col-12 col-md-5">
+						<i class="fas fa-map-marker-alt"></i>
+						Địa chỉ:<b>01 Nguyễn Cửu Vân,Bình Thạnh,TP.HCM</b>
+					</div>
+					<div class="col-12 col-md-4">
+						
+						<a href="#">
+							<b>Đăng nhập</b>
+						</a>
+						hoặc
+					 	<a href="#">
+					 		<b>Tạo tài khoản mới</b>
+					 	</a>
+					 	
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mid-header">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-md-6">
+						<img src="images/logo.png" alt="logo" loading="lazy">
+					</div>
+					<div class="col-12 col-md-3">
+						<form name="myform" method="get" action="#">
+							<div class="input-group mb-3">
+								<input type="text" class="form-control" placeholder="Tìm kiếm" >
+								<div class="input-group-append">
+									<button class="btn btn-outline-secondary" type="submit">
+										<i class="fa fa-search"></i>
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="col-12 col-md-3">
+						<div class="media">
+							<div class="align-self-end mr-3" >
+								<span>
+									<i class="fa fa-shopping-cart"></i>
+								</span>
+							</div>
+							<div class="media-body">
+								<h5 class="mt-0">3 sản phẩm</h5>
+								<p>1,256,000 đ</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="nav-bar">
+			<div class="container ">
+				<ul class="nav">
+					<li class="active"><a href="#">TRANG CHỦ</a></li>
+					<li><a href="#">HOA SINH NHẬT</a></li>
+					<li><a href="#">HOA TÌNH YÊU</a></li>
+					<li><a href="#">HOA CHÚC MỪNG</a></li>
+					<li><a href="#">HOA VĂN PHÒNG</a></li>
+					<li><a href="#">CHỦ ĐỀ</a></li>
+					<li><a href="#">THIẾT KẾ</a>
+						<ul class="sub-nav">
+							<li><a href="#">HOA CÀNH</a></li>
+							<li><a href="#">HOA BÓ</a></li>
+							<li><a href="#">HOA LẢNG</a></li>
+							<li><a href="#">HOA GIỎ</a></li>
+							<li><a href="#">HOA HỘP</a></li>
+							<li><a href="#">HOA BÌNH</a></li>
+							<li><a href="#">HOA KỆ</a></li>
+							<li><a href="#">HOA CHẬU</a></li>
+						</ul>
+					</li>
+					<li><a href="#">THỂ LOẠI</a></li>
+					<li><a href="#">QUÀ TẶNG</a></li>
+				</ul>
+				<div class="mobile-menu">
+					<span class="mobile-menu-icon"><i class="fas fa-align-justify"></i></span>
+					<span class="mobile-menu-title">DANG MỤC SẢN PHẨM</span>
+				</div>
+				<div class="mobile-menu-group">
+					<ul class="parent-menu">
+						<li class="active"><a href="#">TRANG CHỦ</a></li>
+						<li><a href="#">HOA SINH NHẬT</a></li>
+						<li><a href="#">HOA TÌNH YÊU</a></li>
+						<li><a href="#">HOA CHÚC MỪNG</a></li>
+						<li><a href="#">HOA VĂN PHÒNG</a></li>
+						<li><a href="#">CHỦ ĐỀ</a></li>
+						<li><a href="#">THIẾT KẾ</a>
+							<ul class="sub-nav">
+								<li><a href="#">HOA CÀNH</a></li>
+								<li><a href="#">HOA BÓ</a></li>
+								<li><a href="#">HOA LẢNG</a></li>
+								<li><a href="#">HOA GIỎ</a></li>
+								<li><a href="#">HOA HỘP</a></li>
+								<li><a href="#">HOA BÌNH</a></li>
+								<li><a href="#">HOA KỆ</a></li>
+								<li><a href="#">HOA CHẬU</a></li>
+							</ul>
+						</li>
+						<li><a href="#">THỂ LOẠI</a></li>
+						<li><a href="#">QUÀ TẶNG</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div class="slider">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-md-7">
+						<!-- slider -->
+						<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+							<div class="carousel-inner">
+								<div class="carousel-item active" data-interval="10000">
+									<img src="images/flower_1-big.PNG" class="d-block w-100" alt="1" loading="lazy">
+								</div>
+								<div class="carousel-item" data-interval="2000">
+									<img src="images/logo.png" class="d-block w-100" alt="2" loading="lazy">
+								</div>
+							</div>
+							<a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+						<!-- end slider -->
+					</div>
+					<div class="col-12 col-md-5" id="silde-img">
+						<div class="row">
+							<div class="col-6 col-md-12">
+								<img src="images/freeShip.PNG" alt="2" loading="lazy">
+							</div>
+							<div class="col-6 col-md-12">
+								<img src="images/discount.PNG" alt="2" loading="lazy">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main> 
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-8">
+					<div class="title">
+						<h1>SẢN PHẨM KHUYẾN MÃI</h1>
+					</div>
+					<section class="row">
+						<div class="col-6 col-md-3">
+							<a href="#">
+								<div class="col-12">
+									<div id="img-holder">
+									<img src="images/flower_1.PNG" alt="flower" loading="lazy">
+									<div class="overlay-discont">
+										<span>-10%</span>
+									</div>
+									</div>
+									<div id="info-flower">
+										<p id="flower-name">Khai trương hồng phát 2</p>
+										<p id="id-flower">VS035</p>
+										<p id="discount">890,000 <span>đ</span></p>
+										<p>807,500 <span>đ</span></p>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-6 col-md-3">
+							<a href="#">
+								<div class="col-12">
+									<div id="img-holder">
+									<img src="images/flower_2.PNG" alt="flower" loading="lazy">
+									<div class="overlay-discont">
+										<span>-30%</span>
+									</div>
+									</div>
+									<div id="info-flower">
+										<p id="flower-name">Tình bền lâu</p>
+										<p id="id-flower">VS002</p>
+										<p id="discount">410,000 <span>đ</span></p>
+										<p>300,500 <span>đ</span></p>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-6 col-md-3">
+							<a href="#">
+								<div class="col-12">
+									<div id="img-holder">
+									<img src="images/flower_3.PNG" alt="flower" loading="lazy">
+									<div class="overlay-discont">
+										<span>-20%</span>
+									</div>
+									</div>
+									<div id="info-flower">
+										<p id="flower-name">Ngày nắng</p>
+										<p id="id-flower">VS005</p>
+										<p id="discount">550,000 <span>đ</span></p>
+										<p>470,500 <span>đ</span></p>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-6 col-md-3">
+							<a href="#">
+								<div class="col-12">
+									<div id="img-holder">
+									<img src="images/flower_4.PNG" alt="flower" loading="lazy">
+									<div class="overlay-discont">
+										<span>-40%</span>
+									</div>
+									</div>
+									<div id="info-flower">
+										<p id="flower-name">Chúc mừng Tốt nghiệp</p>
+										<p id="id-flower">VS004</p>
+										<p id="discount">450,000 <span>đ</span></p>
+										<p>350,000 <span>đ</span></p>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-6 col-md-3">
+							<a href="#">
+								<div class="col-12">
+									<div id="img-holder">
+									<img src="images/flower_5.PNG" alt="flower" loading="lazy">
+									<div class="overlay-discont">
+										<span>-20%</span>
+									</div>
+									</div>
+									<div id="info-flower">
+										<p id="flower-name">Ngày nắng</p>
+										<p id="id-flower">VS005</p>
+										<p id="discount">550,000 <span>đ</span></p>
+										<p>470,500 <span>đ</span></p>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-6 col-md-3">
+							<a href="#">
+								<div class="col-12">
+									<div id="img-holder">
+									<img src="images/flower_6.PNG" alt="flower" loading="lazy">
+									<div class="overlay-discont">
+										<span>-40%</span>
+									</div>
+									</div>
+									<div id="info-flower">
+										<p id="flower-name">Chúc mừng Tốt nghiệp</p>
+										<p id="id-flower">VS004</p>
+										<p id="discount">450,000 <span>đ</span></p>
+										<p>350,000 <span>đ</span></p>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-6 col-md-3">
+							<a href="#">
+								<div class="col-12">
+									<div id="img-holder">
+									<img src="images/flower_7.PNG" alt="flower" loading="lazy">
+									<div class="overlay-discont">
+										<span>-10%</span>
+									</div>
+									</div>
+									<div id="info-flower">
+										<p id="flower-name">Khai trương hồng phát</p>
+										<p id="id-flower">VS035</p>
+										<p id="discount">890,000 <span>đ</span></p>
+										<p>807,500 <span>đ</span></p>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-6 col-md-3">
+							<a href="#">
+								<div class="col-12">
+									<div id="img-holder">
+									<img src="images/flower_8.PNG" alt="flower" loading="lazy">
+									<div class="overlay-discont">
+										<span>-30%</span>
+									</div>
+									</div>
+									<div id="info-flower">
+										<p id="flower-name">Tình bền lâu</p>
+										<p id="id-flower">VS002</p>
+										<p id="discount">410,000 <span>đ</span></p>
+										<p>300,500 <span>đ</span></p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</section>
+				</div>
+				<div class="col-12 col-md-4">
+					<aside>
+						<div class="title">
+							<h1>SẢN PHẨM VỪA XEM</h1>
+						</div>
+						<a href="#">
+							<div class="media">					
+								<img src="images/flower_4.PNG" class="mr-3" alt="flower" loading="lazy">
+								<div class="info-aside">
+									<h5 class="mt-0">Chúc mừng Tốt nghiệp</h5>
+									<p>350,000 <span>đ</span></p>
+								</div>
+							</div>
+						</a>
+						<a href="#">
+							<div class="media">
+								<img src="images/flower_2.PNG" class="mr-3" alt="flower" loading="lazy">
+								<div class="info-aside">
+									<h5 class="mt-0">Tình bền lâu</h5>
+									<p id="discount">450,000 <span>đ</span></p>
+									<p>350,500 <span>đ</span></p>
+								</div>
+								<div class="overlay-discont">
+									<span>-30%</span>
+								</div>
+							</div>
+						</a>
+						<a href="#">
+							<div class="media">
+								<img src="images/flower_5.PNG" class="mr-3" alt="flower" loading="lazy">
+								<div class="info-aside">
+									<h5 class="mt-0">Ngày nắng</h5>
+									<p>470,500 <span>đ</span></p>
+								</div>
+							</div>
+						</a>
+					</aside>
+					<article>
+						<div class="title">
+							<h1>TIN TỨC</h1>
+						</div>
+						<a href="#">
+							<div class="media">
+								<img src="images/news-1.PNG" class="mr-3" alt="news" loading="lazy">
+								<div class="info-aside">
+									<h5 class="mt-0">Hoa tươi VOW khuyến mãi gói event tưng bừng</h5>
+									<p><i class="fas fa-calendar-alt"></i> 18/07/2015 </p>
+								</div>
+							</div>
+						</a>
+						<a href="#">
+							<div class="media">
+								<img src="images/news-2.PNG" class="mr-3" alt="news" loading="lazy">
+								<div class="info-aside">
+									<h5 class="mt-0">Ý nghĩa các loại hoa trong năm</h5>
+									<p><i class="fas fa-calendar-alt"></i> 17/07/2015</p>
+								</div>
+							</div>
+						</a>
+						<a href="#">
+							<div class="media">
+								<img src="images/news-3.PNG" class="mr-3" alt="news" loading="lazy">
+								<div class="info-aside">
+									<h5 class="mt-0">Violet on Wednesday tuyển nhân viên</h5>
+									<p><i class="fas fa-calendar-alt"></i> 17/07/2015 </p>
+								</div>
+							</div>
+						</a>
+
+					</article>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="top-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-md-4">
+						<div class="media">
+							<img src="images/ship.PNG" class="mr-3" alt="ship" loading="lazy">
+							<div class="media-body">
+								<h5 class="mt-0">GIAO HÀNG MIỄN PHÍ</h5>
+								<p>Chúng tôi giao hàng miễn phí trong nội thành</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-4">
+						<div class="media">
+							<img src="images/consult.PNG" class="mr-3" alt="consult" loading="lazy">
+							<div class="media-body">
+								<h5 class="mt-0">TƯ VẤN TẬN TÂM</h5>
+								<p>Mang đến cho Quý Khách những sản phẩm tốt nhất</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-4">
+						<div class="media">
+							<img src="images/price.PNG" class="mr-3" alt="ship" loading="lazy">
+							<div class="media-body">
+								<h5 class="mt-0">GIÁ THÀNH TỐT NHẤT</h5>
+								<p>Cam kết giá thành & dịch vụ sau bán hàng tốt nhất</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="mid-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-md-3">
+						<div class="section_12">
+							<div>
+								<h4>HỆ THỐNG</h4>
+							</div>
+							<hr>
+							<div>
+								<ul>
+									<li>
+										<a href="problem5.html">
+											Hoa sinh nhật
+										</a>
+									</li>
+									<li>
+										<a href="problem5.html" >
+											Hoa cưới
+										</a>
+									</li>
+									<li>
+										<a href="problem5.html" >
+											Hoa chúc mừng
+										</a>
+									</li>
+									<li>
+										<a href="problem5.html" >
+											Chủ đề
+										</a>
+									</li>
+									<li>
+										<a href="problem5.html">
+											Thiết kế
+										</a>
+									</li>
+									<li>
+										<a href="problem5.html">
+											Hoa theo thể loại
+										</a>
+									</li>
+									<li>
+										<a href="problem5.html" >
+											Quà tặng
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-3">
+						<div class="section_12">
+							<div>
+								<h4>CÔNG TY</h4>
+							</div>
+							<hr>
+							<div>
+								<ul>
+									<li>
+										<a href="problem5.html" >
+											Giới thiệu
+										</a>
+									</li>
+									<li>
+										<a href="problem5.html">
+											Tin tức 
+										</a>
+									</li>
+									<li>
+										<a href="problem5.html"  >
+											Tuyển dụng
+										</a>
+									</li>
+									<li>
+										<a href="problem5.html">
+											Chính sách thành viên
+										</a>
+									</li>
+									<li>
+										<a href="problem5.html">
+											Chương trình khuyến mãi
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-3">
+						<div class="section_12">
+							<div>
+								<h4>THÔNG TIN</h4>
+							</div>
+							<hr>
+							<div>
+								<ul>
+									<li>
+										<a href="problem5.html">
+											Hướng dẫn đặt hàng
+										</a>
+									</li>
+									<li>
+										<a href="problem5.html">
+											Phương thức thành toán
+										</a>
+									</li>
+									<li>
+										<a href="problem5.html">
+											Điều khoản mua hàng
+										</a>
+									</li>
+									<li>
+										<a href="problem5.html">
+											Phí vận chuyển
+										</a>
+									</li>
+									<li>
+										<a href="problem5.html">
+											Ý nghĩa loài hoa
+										</a>
+									</li>
+									<li>
+										<a href="problem5.html">
+											Chăm sóc và bảo quản hoa
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-3">
+						<div class="section_15">
+							<div>
+								<h4>VIOLET ON WEDNESDAY</h4>
+							</div>
+							<hr>
+							<div class="row">
+								<div class="col-5">
+									<p><b>Địa chỉ</b></p>
+								</div>
+								<div class="col-7">
+									<p>01 Nguyễn Cửu vân Bình Thạnh,TP.HCM</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-5">
+									<p><b>Điện thoại</b></p>
+								</div>
+								<div class="col-7">
+									<p>08 38 40 90 92</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-5">
+									<p><b>Hotline</b></p>
+								</div>
+								<div class="col-7">
+									<p>0968 159 239</p>
+								</div>
+							</div>
+							<div>
+								<div>
+									<p><b>Mọi ý kiến xin vui lòng gửi về</b></p>
+								</div>
+								<div id="email">
+									<a href="problem5.html">
+										support@violetonwednesday.com
+									</a>
+								</div>
+								<div id="icon">
+									<a href="problem5.html" style="text-decoration: none" >
+										<i class="fab fa-facebook-square"></i>
+									</a>
+									<a href="problem5.html" style="text-decoration: none" >
+										<i class="fab fa-youtube-square"></i>
+									</a>
+									<a href="problem5.html" style="text-decoration: none" >
+										<i class="fab fa-twitter-square"></i>
+									</a>
+									<a href="problem5.html" style="text-decoration: none" >
+										<i class="fab fa-google-plus-square"></i>
+									</a>
+									<a href="problem5.html" style="text-decoration: none" >
+										<i class="fab fa-pinterest-square"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="bottom-footer">
+			<div class="container">
+			 	<div class="row">
+			 		<div class="col-12">
+			 			<div class="section_16">
+							
+							<p>&copy; 2015 Violet on Wednesday Store. ALL Rights Reserved. Sponsored by Letsop Solutions</p>
+						
+						</div>
+			 		</div>
+			 	</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
