@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Selection sort</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		_numberArray=[3,6,8,1,5,6,9,6,62,84,51,5165,2,31,6,6,46,3];
+		let pNode =document.createElement("p");
+		function showArray(_numberArray){
+			let _s = "";
+			for (let p of _numberArray) {
+				_s +=`${p} `;
+			}
+			pNode.innerHTML += _s+"<br>";
+			document.body.appendChild(pNode);
+		}
+		function compare(a,b){
+			if (a < b) {
+				return -1;
+			}
+			if (a > b) {
+				return 1;
+			}
+			return 0;
+		}
+		function sortArray(_numberArray){
+			_numberArray.sort(compare);
+			showArray(_numberArray);
+		}
+	</script>
+</head>
+<body>
+
+	<script type="text/javascript">
+		pNode.innerHTML+="Before sort: <br>";
+		document.body.appendChild(pNode);
+		showArray(_numberArray);
+		pNode.innerHTML+="After sort: <br>";
+		document.body.appendChild(pNode);
+		sortArray(_numberArray);
+	</script>
+</body>
+</html>

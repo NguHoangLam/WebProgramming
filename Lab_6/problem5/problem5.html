@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Product List</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<!-- my css -->
+	<link rel="stylesheet" type="text/css" href="problem5.css">
+	<script type="text/javascript">
+		function makeProduct(id,pName,quantity,price,image){
+			return{
+				id:id,
+				pName:pName,
+				quantity:quantity,
+				price:price,
+				image:image,
+				toString: function(){
+					return this.id+' '+this.pName+' '+this.quantity+' '+this.price+' '+this.image;
+				}
+			}
+		}
+		let _arrProduct=[makeProduct('0','banana','100','100$','https://www.voipmart.vn/wp-content/uploads/2016/05/A10W1-300x300.png'),
+			makeProduct('1','ringo','10','10$','https://upload.wikimedia.org/wikipedia/commons/9/97/TankshermanM4.jpg'),
+			makeProduct('2','sakana','10','30$','https://ae01.alicdn.com/kf/HTB1L6RoPpXXXXXnapXXq6xXFXXX5/1-35-c-WWII-Sd-Kfz-182-King-Tiger-tanks-Henry-Scher-m-h-nh-L.jpg'),];
+
+		for (let i of _arrProduct) {
+			console.log(i.toString());
+		}
+
+		function pprint(_arrProduct){
+			let _s = "";
+			for (let p of _arrProduct) {
+				_s +=`
+					<div class="col-sm-4 col-md-2 col-lg-3 col-xl-2">
+					<div class="product-group">
+						<div class="img-wrapper">
+							<img src="${p.image}" alt="product"  loading="lazy">
+							<div class="hover-screen">
+								<a href="#">
+									ĐẶT HÀNG
+								</a>
+								<a href="#">
+									CHI TIẾT
+								</a>
+							</div>
+						</div>	
+						<div id="info">
+							<a href="#">
+								<h5>${p.pName}</h5>
+								<p>${p.price}</p>
+							</a>
+						</div>
+					</div>
+				</div>	
+				`;
+			}
+			let productListNode = document.getElementById('productList');
+			productListNode.innerHTML = _s;
+		}
+
+
+		_arrProduct.unshift(makeProduct('-1','unco','3000','-100$','https://www.thoughtco.com/thmb/TAGDqb0FX4sE2521Lb0NFNrBjXY=/1569x1177/smart/filters:no_upscale()/A_Sherman_tank_of_8th_Armoured_Brigade_in_Kevelaer_Germany_4_March_1945._B15145-5ee92fd41e4040bab305638b2f6b8fcf.jpg'));
+		_arrProduct.push(makeProduct('3','no','7000','100$','https://p4.wallpaperbetter.com/wallpaper/751/280/1007/battleship-the-imperial-japanese-navy-the-naval-forces-of-the-japanese-empire-linear-ships-of-yamato-musashi-hd-wallpaper-preview.jpg'));
+
+		console.log('After add to head and tail');
+
+		
+
+		function searchByName(_name,_arrProduct){
+			let _s="";
+			for (let p of _arrProduct) {
+				if (p.pName.indexOf(_name) >-1) {
+					_s +=`
+						<div class="col-sm-4 col-md-2 col-lg-3 col-xl-2">
+						<div class="product-group">
+							<div class="img-wrapper">
+								<img src="${p.image}" alt="product"  loading="lazy">
+								<div class="hover-screen">
+									<a href="#">
+										ĐẶT HÀNG
+									</a>
+									<a href="#">
+										CHI TIẾT
+									</a>
+								</div>
+							</div>	
+							<div id="info">
+								<a href="#">
+									<h5>${p.pName}</h5>
+									<p>${p.price}</p>
+								</a>
+							</div>
+						</div>
+					</div>	
+					`;
+				}
+			}
+			let productListNode = document.getElementById('productList');
+			productListNode.innerHTML = _s;
+		}
+
+		function removeByID(_id,_arrProduct){
+			for (let i in _arrProduct) {
+				if (_arrProduct[i].id == _id) {
+					_arrProduct.splice(i,1);
+					break;
+				}
+			}
+		};
+		function compare(a,b){
+			if (a.pName < b.pName) {
+				return -1;
+			}
+			if (a.pName > b.pName) {
+				return 1;
+			}
+			return 0;
+		}
+	</script>
+</head>
+<body>
+	<main>
+		<div class="container-fluid">
+			<div class="title">
+				<h2>TỔNG ĐÀI IP</h2>
+			</div>
+			<div class="row" id="productList">
+
+			</div>
+		</div>
+	</main>
+
+
+	<script type="text/javascript">
+		// _arrProduct.sort(compare);	
+		removeByID("1",_arrProduct)
+		pprint(_arrProduct);
+		// searchByName("banana",_arrProduct)
+	</script>
+</body>
+</html>

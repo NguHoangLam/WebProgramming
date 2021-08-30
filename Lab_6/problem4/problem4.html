@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Compare Array of Objects</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<!-- my css -->
+	<link rel="stylesheet" type="text/css" href="problem4.css">
+	<script type="text/javascript">
+		let products =[
+			{
+				"ProductName":"King Tiger",
+				"Price":100,
+				"ImageURL":"http://www.stormracer.com/admin/upload/products/tank_German_King_Tiger_2G4/KingTiger.jpg"
+			},
+			{
+				"ProductName":"Tiger",
+				"Price":30,
+				"ImageURL":"https://upload.wikimedia.org/wikipedia/commons/b/b4/TigerITankTunis.jpg"
+			},
+			{
+				"ProductName":"MAUS",
+				"Price":300,
+				"ImageURL":"https://i.ytimg.com/vi/mIdmzPWf0QI/maxresdefault.jpg"
+			},
+
+		];
+		function pprint(_ProductList){
+			let _s = "";
+			for (let p of _ProductList) {
+				_s +=`
+					<div class="col-sm-4 col-md-2 col-lg-3 col-xl-2">
+					<div class="product-group">
+						<div class="img-wrapper">
+							<img src="${p.ImageURL}" alt="product"  loading="lazy">
+							<div class="hover-screen">
+								<a href="#">
+									ĐẶT HÀNG
+								</a>
+								<a href="#">
+									CHI TIẾT
+								</a>
+							</div>
+						</div>	
+						<div id="info">
+							<a href="#">
+								<h5>${p.ProductName}</h5>
+								<p>${p.Price} $</p>
+							</a>
+						</div>
+					</div>
+				</div>	
+				`;
+			}
+			let productListNode = document.getElementById('productList');
+			productListNode.innerHTML = _s;
+		}
+		function compare(a,b){
+			if (a.Price < b.Price) {
+				return -1;
+			}
+			if (a.Price > b.Price) {
+				return 1;
+			}
+			return 0;
+		}
+	</script>
+</head>
+<body>
+	<main>
+		<div class="container-fluid">
+			<div class="title">
+				<h2>TỔNG ĐÀI IP</h2>
+			</div>
+			<div class="row" id="productList">
+
+			</div>
+		</div>
+	</main>
+
+	<script type="text/javascript">
+		products.sort(compare);
+		pprint(products);
+
+	</script>
+
+	
+</body>
+</html>

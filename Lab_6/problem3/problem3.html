@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Replace all href values</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function replaceHref (href) {
+			let _a=document.getElementsByTagName("a");
+			for(let i of _a){
+			i.href=href;
+		}
+		}
+	</script>
+</head>
+<body>
+	<a href="">A</a>
+	<a href="">B</a>
+	<a href="">C</a>
+
+	<script type="text/javascript">
+		replaceHref("https://www.google.com/");
+	</script>
+</body>
+</html>
