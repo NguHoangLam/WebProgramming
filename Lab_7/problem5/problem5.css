@@ -1,0 +1,21 @@
+.container .row .col-md-3 img{
+	width: 100%;
+	height: auto;
+	cursor: pointer;
+}
+.show-picture{
+	margin-top: 10px;
+	position: relative;
+}
+.show-picture img{
+	width: 100%;
+	height: auto;
+	display: none;
+}
+.close{
+	position: absolute;
+	color: white;
+	top: 10px;
+	right: 20px;
+	cursor: pointer;
+}

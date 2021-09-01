@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gallery</title>
+	<meta charset="utf-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- my css -->
+	<link rel="stylesheet" type="text/css" href="problem5.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<img src="images/Gallery-1.PNG" onclick="picture(this)"  alt="Gallery" loading="lazy">
+			</div>
+			<div class="col-md-3">
+				<img src="images/Gallery-2.PNG" onclick="picture(this)"  alt="Gallery" loading="lazy">
+			</div>
+			<div class="col-md-3">
+				<img src="images/Gallery-3.PNG" onclick="picture(this)" alt="Gallery" loading="lazy">
+			</div>
+			<div class="col-md-3">
+				<img src="images/Gallery-4.PNG"onclick="picture(this)" alt="Gallery" loading="lazy">
+			</div>
+		</div>
+		<div class="show-picture" >
+			 <img src="" id="banana" alt="Gallery" loading="lazy">
+			 <span class="close" onclick="close_picture()">X</span>
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+		function picture(evnt) {
+			let picture = document.getElementById("banana");
+			picture.src = evnt.src;
+			picture.style.display ="block";
+		}
+		function close_picture(){
+			let picture = document.getElementById("banana");
+			picture.style.display ="none";
+		}
+	</script>
+</body>
+</html>

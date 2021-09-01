@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create a To Do List</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="problem4.css">
+	<!-- font awesome -->
+	<link href="fontawesome/css/all.min.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+	<div id="MyDIV">
+		<h1>My To Do List</h1>
+		<input id="myInput" type="text" name="title" placeholder="Title...">
+		<span onclick="add_list()">Add</span>
+	</div>
+	<ul id="justUl">
+		<li>Hit the bank <span class="close">x</span></li>
+		<li class="checked">Take out the Gun <span class="close">x</span></li>
+	</ul>
+
+	<script type="text/javascript">
+		let myUI = document.getElementById("justUl");
+		myUI.addEventListener("click", function(ev){
+			if (ev.target.tagName === "LI") {
+				ev.target.classList.toggle('checked')
+			}else if (ev.target.tagName === "SPAN") {
+				ev.target.parentElement.style.display = 'none';
+			}
+		},false);
+		function add_list(){
+			let myInput = document.getElementById("myInput");
+			
+
+			if (myInput.value === '') {
+				alert('Please input something');
+			}else {
+				let li = document.createElement("li")
+				li.innerHTML = myInput.value+'<span class="close">x</span>';
+				myUI.appendChild(li);
+				myInput.value='';
+			}
+		}
+	</script>
+</body>
+</html>
