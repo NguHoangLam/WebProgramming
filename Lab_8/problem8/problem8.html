@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Management System</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<!-- font awesome -->
+	<link href="fontawesome/css/all.min.css" type="text/css" rel="stylesheet">
+	<!-- my css -->
+	<link rel="stylesheet" type="text/css" href="problem8.css">
+
+</head>
+<body>
+	<main>
+		<div class="container">
+			<header>
+				<h1>Student Management System</h1>
+			</header>
+
+			<div class="row">
+				<div class="col-3 aside">
+					<aside>
+						<h2>Class List</h2>
+						<ul type="disc" class="dept-list">
+							<!-- <li><a href="#">Lớp 1</a></li>
+							<li><a href="#">Lớp 2</a></li> -->
+						</ul>
+					</aside>
+				</div>
+				<!-- end col-4 -->
+				<div class="col-9 main-content">
+					<section class="addStudents">
+						<div class="card-header">
+							Add a new student
+						</div>
+						<div class="groupInput">
+							<div class="row">
+								<div class="col-2">
+									<input type="text" class="form-control" name="ID" id="id" placeholder="ID">
+								</div>
+								<div class="col-3">
+									<input type="text" class="form-control" name="firstName" id="fname" placeholder="First Name">
+								</div>
+								<div class="col-3">
+									<input type="text" class="form-control" name="lasttName" id="lname" placeholder="Last Name">
+								</div>
+								<div class="col-2">
+									<select id="dept" class="form-control">
+									  <!--   <option selected>Choose...</option>
+								        <option>...</option> -->
+							      	</select>
+								</div>
+								<div class="col-2">
+									<button type="button" id="submit" class="btn btn-primary">Add</button>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section class="search-by-name">
+						<label for="search-name">
+							Search Name:
+						</label>
+						<input type="text" class="search" id="search-name" name="search" placeholder="Search...">
+						<button type="button" class="btn btn-primary search">Search</button>
+					</section>
+
+					<section class="Header-info">
+						<div class="card-header">
+							Student List
+						</div>
+						<div class="row">
+							<div class="col-1">
+								#
+							</div>
+							<div class="col-4">
+								Full Name
+							</div>
+							<div class="col-4">
+								Department
+							</div>
+							<div class="col-3">
+								Function
+							</div>
+						</div>
+					</section>
+					<section class="show-info">
+					<!-- 	<div class="row">
+							<div class="col-1">
+								1
+							</div>
+							<div class="col-4">
+								Banana to ringo
+							</div>
+							<div class="col-4">
+								113
+							</div>
+							<div class="col-3">
+								<button type="button">Edit</button>
+								<button type="button">Delete</button>
+							</div>
+						</div> -->
+					</section>
+				</div>
+				<!-- end col -8 -->
+			</div>
+		</div>
+	</main>
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+		$(document).ready(function(){
+			let Staffs,Depts;
+			$.get(
+				"http://45.76.156.126/getdata.php?Type=Staff",
+				function(data){
+					Staffs=data;
+					Staffs.sort(compareStudent);
+					ShowStudents(Staffs);
+					console.log(Staffs);
+				},"json"
+			);
+			$.get(
+				"http://45.76.156.126/getdata.php?Type=Department",
+				function(data){
+					Depts=data;
+					ShowDepts(Depts);
+					console.log(Depts);
+				},"json"
+			);
+
+			function ShowStudents(_StuList){
+				let _s ="",i=0;
+				for (let _d of _StuList) {
+					_s+=`
+					<div class="row">
+							<div class="col-1">
+								${++i}
+							</div>
+							<div class="col-4">
+								${_d.FistName+" "+_d.LastName}
+							</div>
+							<div class="col-4">
+								${_d.Department}
+							</div>
+							<div class="col-3">
+								<button type="button" data-id="${_d.ID}" class="btn edit">Edit</button>
+								<button type="button" data-id="${_d.ID}" class="btn del">Delete</button>
+							</div>
+						</div>
+
+					`
+				}
+				$('.show-info').html("");
+				$('.show-info').append(_s);
+			}
+
+			function ShowDepts(_DeptsList){
+				let _s ="",_option="";
+				for (let _d of _DeptsList) {
+					_s+=`<li><a href="#">${_d}</a></li>`;
+					_option+=`<option value="${_d}">${_d}</option>`;
+				}
+				$('.dept-list').append(_s);
+				$('#dept').append(_option);
+			}
+
+			// sort by Name before showing the list
+			function compareStudent(a,b){
+				if (a.LastName < b.LastName) return -1;
+				if (a.LastName > b.LastName) return 1;
+					return 0;
+			}
+			// Insert
+			$('#submit').click(function(){
+				let _ID=$('#id').val();
+				let _FirstName=$('#fname').val();
+				let _LastName=$('#lname').val();
+				let _Dept=$('#dept').val();
+				
+				_confirm =true;
+				if ($('.addStudents .card-header').text() =="Edit student's information") {
+					
+					for (let _index in Staffs){
+						if (Staffs[_index].ID == _ID){
+							Staffs[_index].ID=_ID;
+							Staffs[_index].FistName=_FirstName;
+							Staffs[_index].LastName=_LastName;
+							Staffs[_index].Department=_Dept;
+							_confirm = false;
+							break;
+						}
+					
+					}
+					$('.addStudents .card-header').text("Add a new student");
+					$('.groupInput #submit').text("Add");
+				}
+				
+				if(_confirm){
+					Staffs.unshift({
+						"ID":_ID,
+						"FistName":_FirstName,
+						"LastName":_LastName,
+						"Department":_Dept,
+						"Email":""
+					});
+				}
+				ShowStudents(Staffs);
+			});
+			// delete
+			$('.show-info').on('click','.del',function(ev){
+				let _confirm = confirm("think twice!");
+				if (_confirm) {
+					let _ID= $(this).attr("data-id");
+					for (let _index in Staffs) {
+						if (Staffs[_index].ID == _ID) {
+							Staffs.splice(_index,1);
+							break;
+						}
+					}
+				}
+				ShowStudents(Staffs);
+			
+			});
+			// Show the list by class
+			$('.dept-list').on('click','li',function(ev){
+				let _Dept= $(this).text();
+				let _temptList =[];
+				for (let _d of Staffs) {
+						if (_d.Department == _Dept) {
+							_temptList.push(_d);
+						}
+					}
+				ShowStudents(_temptList);
+			
+			});
+			// Find by Name
+			$('.search-by-name').on('click','.search',function(ev){
+				_InputName = $('#search-name').val();
+				let _temptList =[];
+				for (let _d of Staffs) {
+					if (_d.LastName.indexOf(_InputName)>-1) {
+						_temptList.push(_d);
+					}
+				}
+				ShowStudents(_temptList);
+			
+			});
+			// Update
+			$('.show-info').on('click','.edit',function(ev){
+				let _ID= $(this).attr("data-id");
+				for (let _index in Staffs) {
+					if (Staffs[_index].ID == _ID) {
+							$('#id').val(Staffs[_index].ID);
+							$('#fname').val(Staffs[_index].FistName);
+							$('#lname').val(Staffs[_index].LastName);
+							$('#dept').val(Staffs[_index].Department);
+							$('.addStudents .card-header').text("Edit student's information");
+							$('.groupInput #submit').text("Update");
+						break;
+					}
+				}
+				// ShowStudents(Staffs);
+			
+			});
+		});
+	</script>
+</body>
+</html>

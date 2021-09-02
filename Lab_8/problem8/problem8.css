@@ -1,0 +1,51 @@
+main{
+	height: 100%;
+}
+.container aside{
+	border:1px solid black;
+	padding: 10px;
+	min-height: 500px;
+}
+.container aside a{
+	color: black;
+}
+.container .main-content{
+	border:1px solid black;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.container section .card-header{
+	background-color: #F7F7F7;
+	margin-bottom: 20px;
+}
+.container .groupInput{
+	margin: 10px;
+}
+.container .addStudents{
+	margin-top: 5px;
+	border:1px solid black;
+	margin-bottom: 40px;
+	padding-bottom: 20px;
+}
+.container .show-info{
+	margin-bottom: 30px;
+}
+.container .search-by-name input{
+	width: 100px;
+	height: 25px;
+	padding-left: 30px;
+	border: 1px solid rgb(198,198,198);
+	margin-bottom: 20px;
+}
+.container .search-by-name input:focus{
+	width: 300px;
+	border: 3px solid blue;
+	
+}
+.container .search-by-name #search-name {
+	background-image: url(images/search_img.PNG);
+	background-repeat: no-repeat;
+}
+.container .Header-info .row div{
+	font-weight: bold;
+}
