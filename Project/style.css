@@ -1,0 +1,302 @@
+body{
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+}
+header{
+	background-color: #FC7511;
+}
+/*top header*/
+header .top-header{
+	padding: 5px 0px;
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+header .top-header > .container > .row > .col-md-6{
+	padding-left: 8px;
+}
+header .top-header .top-header-left{
+	list-style-type: none;
+	padding-left: 0;
+}
+header .top-header .top-header-left li{
+	display: block;
+	float: left;
+	margin-left: 10px;
+}
+header .top-header .top-header-left li a,.top-header-right li a{
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+}
+header .top-header .top-header-left li:hover a,.top-header-right li:hover a{
+	color: orange;
+}
+header .top-header .top-header-right{
+	margin: 0px;
+	text-align: right;
+
+}
+header .top-header .top-header-right li{
+	display: inline-block;
+}
+header .top-header .top-header-right li:not(:first-child){
+	border-left: 1px solid rgba(255,255,255,0.1);
+	margin-left: 5px;
+	padding-left: 7px;
+}
+
+header .top-header .top-header-right li:first-child{
+	position: relative;
+	padding: 3px;
+}
+header .top-header .top-header-right li:hover:first-child .sub-top-header-right{
+	display: block;
+}
+header .top-header .top-header-right li:hover:first-child .arrow-up{
+	border-bottom: 5px solid white;
+}
+header .top-header .top-header-right .sub-top-header-right{
+	position: absolute;
+	z-index: 300;
+	top: 27px;
+	left: 0px;
+	min-width: 200px;
+	border: 1px solid #fd9243;
+	background: white;
+	box-shadow: 0 6px 12px 0 rgb(0 0 0);
+	text-align: center;
+	padding: 10px;
+	display: none;
+}
+.arrow-up {
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid #FC7511;
+	position: absolute;
+	z-index: 400;
+	left: 30px;
+
+}
+header .top-header .top-header-right .sub-top-header-right li{
+	display: block;
+	margin-left: 0;
+	padding-left: 0;
+	font-weight: bold;
+}
+header .top-header .top-header-right .sub-top-header-right li a{
+	color: black;
+	padding: 7px 10px;
+	background-color: #f7f7f7;
+	display: block;
+	margin-bottom: 10px;
+	border-radius: 4px;
+}
+header .top-header .top-header-right .sub-top-header-right li:hover a{
+	background-color: orange;
+	color: white;
+}
+/*mid header*/
+.mid-header{
+	padding: 7px 0;
+}
+.mid-header > .container >.row > .col-md-3 img{
+	width: 100%;
+}
+.mid-header > .container >.row > .col-md-4 form{
+	position: relative;
+	padding: 12px 0;
+}
+.mid-header > .container >.row > .col-md-4 form input{
+	width: 100%;
+	border: 1px solid white;
+	border-radius: 5px;
+	height: 38px;
+	padding: 0 20px;
+}
+.mid-header > .container >.row > .col-md-4 form span{
+	position: absolute;
+	right: 0px;
+}
+.mid-header > .container >.row > .col-md-4 form span button{
+	border:1px solid white;
+	background-color: #fc7511;
+	color: white;
+	border-radius: 5px;
+}
+.mid-header > .container >.row > .col-md-5{
+	padding: 10px 0;
+}
+.mid-header > .container >.row > .col-md-5 .media{
+	background-color: #D75D03;
+	border-radius: 10px;
+	padding: 1px 5px;
+	width: 144px;
+	margin-right: 5px;
+	border: 1px solid transparent;
+	color: white;
+	font-weight: bold;
+}
+.mid-header > .container >.row > .col-md-5 .media:hover{
+	border:1px solid white;
+}
+.mid-header > .container >.row > .col-md-5 .mid-header-right{
+	float: right;
+}
+.mid-header > .container >.row > .col-md-5 .media i{
+	margin-top: 13px;
+	margin-left: 5px;
+	font-size: 15px;
+}
+
+.mid-header > .container >.row > .col-md-5 .media .media-body {
+	padding: 5px 0;
+}
+.mid-header > .container >.row > .col-md-5 .media .media-body a{
+	font-size: 14px;
+	color: white;
+	text-decoration: none;
+}
+.mid-header > .container >.row > .col-md-5 .media .media-body span{
+	font-size: 12px;
+}
+/*navigation*/
+nav{
+	background-color: #0EA5E5;	
+	width: 100%;
+	list-style-type: none;
+}
+nav ul {
+	padding: 0;
+	margin: 0;
+}
+nav li{
+	float: left;
+	display: block;
+	align-self: center;
+}
+nav  a {
+	display: inline-block;
+	color: white ;
+	padding: 15px 10px;
+	text-decoration: none !important;
+	font-weight: bold;
+}
+nav .main-nav{
+	background-color: #D75D03;
+	width: 25%;
+}
+nav .main-nav > li{
+	width: 100%;
+	height:51px;
+	position: relative;
+}
+
+nav .main-nav > li a{
+	font-size: 16px;
+}
+
+.nav > li:hover > a,.main-nav > li:hover a{
+	color: white ;
+}
+.main-nav > .active{
+	background-color: #D75D03;
+}
+#dropdown::after {
+	font-family: "Font awesome 5 Free";
+	content: "\f107";
+	font-weight: 900;
+	margin-left: 10px;
+}
+/*sub main navigation*/
+.main-nav .sub-nav {
+	display: none;
+}
+.main-nav > li:hover >.sub-nav{
+	display: block;
+	background-color: white;
+	border:1px solid #FC7511;
+	position: absolute;
+    top: 51px;
+	width: 100%;
+	z-index: 500;
+}
+.main-nav .sub-nav li{
+	display: block;
+	width: 100%;
+	clear: both;
+}
+.main-nav .sub-nav li a{
+	padding: 10px 5px;
+	display: block;
+	color: black;
+}
+.main-nav .sub-nav li a::after{
+	font-family: "Font awesome 5 Free";
+	content: "\f054";
+	font-weight: 900;
+	margin-left: 10px;
+	position: absolute;
+	right: 10px;
+}
+.main-nav .sub-nav > li:hover > a {
+	text-decoration: none;
+	color: black;
+	background-color: #FC7511;
+    display: block;
+}
+
+/*sub navigation*/
+.nav >li {
+	position: relative;
+}
+.nav .sub-nav {
+	display: none;
+
+}
+.nav > li:hover >.sub-nav{
+	display: block;
+	background-color: white;
+	box-shadow: 5px 10px 20px rgb(0,0,0);
+	position: absolute;
+    top: 51px;
+	width: 200px;
+	z-index: 500;
+}
+.nav .sub-nav li{
+	display: block;
+	width: 100%;
+	clear: both;
+	border-bottom: 1px solid #f7f7f7;
+}
+.nav .sub-nav li a{
+	padding: 10px 5px;
+	display: block;
+	color: black;
+}
+.nav .sub-nav > li:hover > a {
+	text-decoration: none;
+	color: orange;
+    display: block;
+}
+/*header slider*/
+header .container-fluid{
+	background-color: white;
+}
+#carouselExampleCaptions a .carousel-control-prev-icon,#carouselExampleCaptions a .carousel-control-next-icon{
+	padding: 30px 20px;
+	background-color: #ccc;
+	border-radius: 8px;
+}
+#carouselExampleCaptions ol li{
+	height: 10px;
+	width: 10px;
+	padding: 5px 5px;
+	border-radius: 50%;
+}
+#carouselExampleCaptions ol .active{
+	width: 30px !important;
+	width: 10px;
+	border-radius: 36%;
+	background-color: orange;
+}
