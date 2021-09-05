@@ -6,6 +6,20 @@ body{
 header{
 	background-color: #FC7511;
 }
+#go-up{
+	position: fixed;
+	bottom: 35px;
+	right: 20px;
+	width: 30px;
+	height: auto;
+	text-align: center;
+	cursor: pointer;
+	background-color: orange;
+	color: white;
+	font-size: 20px;
+	padding: 5px;
+	z-index: 999;
+}
 /*wrapper*/
 #wrapper {
 	padding-left: 0;
@@ -813,4 +827,13 @@ footer .top-footer-2 .top-footer-right li:hover a{
 	.title-box-right{
 		display: none;
 	}
+}
+@media (max-width: 767.98px) {
+	footer .top-footer-2 .top-footer-right{
+		display: none;
+	}
+	section .container .row > .img-holder{
+		display: none;
+	}
+
 }
