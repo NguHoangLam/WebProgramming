@@ -7,7 +7,7 @@ header{
 }
 /*top header*/
 header .top-header{
-	padding: 5px 0px;
+	padding: 5px 0;
 	border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 header .top-header > .container > .row > .col-md-6{
@@ -31,7 +31,7 @@ header .top-header .top-header-left li:hover a,.top-header-right li:hover a{
 	color: orange;
 }
 header .top-header .top-header-right{
-	margin: 0px;
+	margin: 0;
 	text-align: right;
 
 }
@@ -58,11 +58,11 @@ header .top-header .top-header-right .sub-top-header-right{
 	position: absolute;
 	z-index: 300;
 	top: 27px;
-	left: 0px;
+	left: 0;
 	min-width: 200px;
 	border: 1px solid #fd9243;
 	background: white;
-	box-shadow: 0 6px 12px 0 rgb(0 0 0);
+	box-shadow: 0 6px 12px 0;
 	text-align: center;
 	padding: 10px;
 	display: none;
@@ -116,7 +116,7 @@ header .top-header .top-header-right .sub-top-header-right li:hover a{
 }
 .mid-header > .container >.row > .col-md-4 form span{
 	position: absolute;
-	right: 0px;
+	right: 0;
 }
 .mid-header > .container >.row > .col-md-4 form span button{
 	border:1px solid white;
@@ -332,16 +332,15 @@ main .main_title a:hover{
 }
 
 	/*product sample*/
-}
-}
 section .product{
 	width: 100%;
 	text-align: center;
 	font-weight: bold;
-	
+	margin-bottom: 10px;
 }
 section .product .img-holder{
 	position: relative;
+	margin-bottom: 10px;
 }
 section .product .img-holder .discount{
 	font-weight: bold;
@@ -383,26 +382,26 @@ section .product .price-new{
 }
 section .product .product-info{
 	position: relative;
-	min-height: 125px;
+	min-height: 80px;
 	text-align: center;
 }
 .overlay{
 	position: absolute;	
-	width: 0%;
+	width: 0;
 	height: 100%;
 	top: 0;
 	right: 0;
 	background-color: white;
 	transition: 0.5s;
 	overflow-x: hidden;
-
+	overflow: hidden;
 } 
 .overlay-content{
 	text-align: center;
 	list-style-type: none;
 	position: relative;
 	top:  5px;
-	padding: 0px;
+	padding: 0;
 }
 .overlay-content .buy-product{
 	color: white;
@@ -523,4 +522,90 @@ article .container .col-md-3:hover .info a{
   96% {
     filter: brightness(400%);
   }
+}
+
+/*top-footer*/
+.top-footer-2{
+	padding: 7px 0;
+	background-color: #FC7511;
+}
+.top-footer-2 > .container >.row .header-holder{
+	padding-top: 15px;
+}
+.top-footer-2 > .container >.row .header-holder h4{
+	color: white;
+	font-weight: bold;
+	font-size: 15px;
+}
+.top-footer-2 > .container >.row > .col-md-6 form{
+	position: relative;
+	padding-top: 6px;
+}
+.top-footer-2 > .container >.row > .col-md-6 form input{
+	width: 100%;
+	border: 1px solid white;
+	height: 38px;
+	padding: 0 20px;
+}
+.top-footer-2 > .container >.row > .col-md-6 form span{
+	position: absolute;
+	right: 0;
+
+}
+.top-footer-2 > .container >.row > .col-md-6 form span button{
+	border:1px solid white;
+	background-color: #21242B;
+	color: white;
+}
+footer .top-footer-2 .top-footer-right{
+	list-style-type: none;
+	padding-top: 13px;
+}
+footer .top-footer-2 .top-footer-right li{
+	display: block;
+	float: right;
+	padding: 0 5px; 
+}
+footer .top-footer-2 .top-footer-right li a{
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+}
+footer .top-footer-2 .top-footer-right li:hover a{
+	color: #21242B;
+}
+/*mid-footer*/
+.mid-footer{
+	padding-top: 25px;
+	padding-bottom: 10px;
+}
+.mid-footer .mid-footer-header{
+	padding: 13px 0;
+}
+.mid-footer .mid-footer-header h5{
+	font-weight: bold;
+}
+.mid-footer .mid-footer-info a{
+	text-decoration: none;
+	color: black;
+}
+.mid-footer .mid-footer-info a:hover{
+	color: orange;
+}
+/*bottom-footer*/
+.bottom-footer{
+	background-color: #0F0F0F;
+	text-align: center;
+	padding: 10px 0;
+}
+.bottom-footer p{
+	color: #ccc;
+	margin-bottom: 0;
+}
+.bottom-footer a{
+	color: #ccc;
+	text-decoration: none;
+}
+.bottom-footer a:hover{
+	color: orange;
 }
