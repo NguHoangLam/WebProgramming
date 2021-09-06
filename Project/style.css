@@ -677,18 +677,18 @@ article .container .col-md-3:hover .info a{
 }
 
 @keyframes haunted {
-  0% {
-    filter: brightness(20%);
-  }
-  48% {
-    filter: brightness(20%);
-  }
-  50% {
-    filter: sepia(1) contrast(2) brightness(200%);
-  }
-  96% {
-    filter: brightness(400%);
-  }
+	0% {
+		filter: brightness(20%);
+	}
+	48% {
+		filter: brightness(20%);
+	}
+	50% {
+		filter: sepia(1) contrast(2) brightness(200%);
+	}
+	96% {
+		filter: brightness(400%);
+	}
 }
 
 /*top-footer*/
